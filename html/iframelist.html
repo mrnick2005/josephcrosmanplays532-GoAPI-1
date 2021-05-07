@@ -551,12 +551,12 @@ if (self !== top) {
 	</table>
 	<footer>
         <nav id="foot-left">
-		<a href="https://discord.gg/goanimate">Wrapper Central Discord</a>
+		<a href="https://discord.gg/goanimate" target="_blank">Wrapper Central Discord</a>
 	</nav>
 
 	<nav id="foot-right">
-		<a href="https://josephcrosmanplays532.github.io/goanimate-beta-server">Server Page</a>
-		<a href="https://josephcrosmanplays532.github.io/goanimate-beta-server/animation">Animation Server Page</a>
+		<a href="https://josephcrosmanplays532.github.io/goanimate-beta-server" target="_blank">Server Page</a>
+		<a href="https://josephcrosmanplays532.github.io/goanimate-beta-server/animation" target="_blank">Animation Server Page</a>
 	</nav>
 	</footer>
 	<form enctype='multipart/form-data' action='/upload_movie' method='post'>
@@ -582,7 +582,7 @@ if (self !== top) {
 				const tbl = json[c];
 				const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
 				tbody.insertAdjacentHTML('beforeend',
-					'<tr><td><img src="/movie_thumbs/' + tbl.id + '.png"></td><td><div>' + tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/videomaker/full/edit?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
+					'<tr><td><img src="/movie_thumbs/' + tbl.id + '.png"></td><td><div>' + tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/videomaker/full/edit?movieId=" target="_blank' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
 			}
 		}
 
